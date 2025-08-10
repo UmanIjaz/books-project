@@ -1,0 +1,149 @@
+/* Hide sidebar below 400px */
+@media (max-width: 400px) {
+  .sidebar {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex !important;
+  }
+}
+
+/* 400px - 599px: compact sidebar */
+@media (min-width: 400px) and (max-width: 700px) {
+  .sidebar {
+    width: 75px !important;
+    min-width: 75px !important;
+    max-width: 75px !important;
+    padding-left: 0;
+    padding-right: 0;
+    align-items: center;
+  }
+  .sidebarNav {
+    align-items: center;
+  }
+  .sidebarLink span {
+    display: none !important;
+  }
+
+  .logoWrapper {
+    display: none;
+  }
+}
+.sidebar {
+  width: 100%;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  box-shadow: 0 2px 16px 0 rgba(108, 99, 255, 0.08);
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  height: 100vh;
+  position: relative;
+}
+
+.middleScreen {
+  width: 60px;
+}
+
+.logoWrapper {
+  margin-left: 1.9rem;
+}
+
+.logoMobile {
+  width: 38px;
+}
+
+.sidebarNav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  margin: 0;
+  margin-top: 4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebarLink {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  gap: 0.9rem;
+  padding: 0.85rem 1.2rem 0.85rem 1.2rem;
+  border-radius: var(--radius);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  text-align: left;
+  margin: 0.1rem 0;
+  position: relative;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.sidebarLink svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  stroke: var(--color-text-secondary);
+  fill: none;
+  transition: stroke 0.18s;
+}
+
+.sidebarLink:hover {
+  background: var(--color-hover);
+  color: var(--color-primary);
+}
+
+.active {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 6px 24px 0 rgba(108, 99, 255, 0.13);
+}
+
+.active:hover {
+  background: var(--color-primary);
+
+  color: #fff;
+}
+
+.active svg {
+  stroke: #fff;
+}
+
+@media (min-width: 701px) {
+  .sidebar {
+    width: 250px;
+    min-height: 100vh;
+    align-items: flex-start;
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+    box-shadow: 4px 0 32px 0 rgba(108, 99, 255, 0.07);
+  }
+  .sidebarNav {
+    gap: 0.3rem;
+  }
+
+  .sidebarLink {
+    text-align: left;
+    font-size: 0.85rem;
+    padding: 0.8rem 1.5rem;
+    min-width: 180px;
+  }
+
+  .logoMobile {
+    display: none;
+  }
+}
+
+.ThemeBtnAbsolute {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: var(--color-text-secondary) !important;
+}

@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.pageBtn {
+  background: var(--color-surface);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  color: var(--color-primary);
+  cursor: not-allowed;
+  font-weight: 500;
+  transition: background 0.18s;
+}
+.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius);
+  font-weight: 700;
+}

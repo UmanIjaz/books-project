@@ -1,0 +1,16 @@
+.pieChartBox {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pieChartBox h4 {
+  margin-bottom: 1rem;
+}
+
+.chartWrapper {
+  position: relative;
+  height: 220px;
+  width: 100%;
+}

@@ -1,0 +1,21 @@
+.themeToggleBtn {
+  border-radius: var(--radius);
+  padding: 1rem 16px;
+  font-size: 1.1rem;
+  color: #a0a0a3;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--color-text);
+  padding: 0.85rem 1.2rem 0.85rem 1.2rem;
+}
+
+.themeToggleBtn:hover {
+  background: var(--color-hover);
+  color: var(--color-primary);
+}
+
+.themeToggleBtn:focus {
+  outline: none;
+}

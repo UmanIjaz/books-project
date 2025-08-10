@@ -1,0 +1,111 @@
+.hamburgerMenu {
+  background: var(--color-surface);
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: slideIn 0.22s cubic-bezier(0.4, 1.2, 0.6, 1) 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.closed {
+  transform: translateX(100%);
+}
+
+.active {
+  /* background: var(--color-hover); */
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.menuProfile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menuProfileText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.menuProfileName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.menuProfileSub {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.menuClose {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: color 0.18s;
+  outline: none;
+  border: none;
+  padding: 0;
+}
+.menuClose:hover {
+  color: var(--color-primary);
+}
+.menuClose:focus {
+  outline: none;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  font-size: 1.08rem;
+  color: var(--color-text);
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+  transition: background 0.18s, color 0.18s;
+}
+.menuItem:hover {
+  background: var(--color-hover);
+  color: var(--color-primary);
+}
+
+.ThemeBtnAbsolute {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}

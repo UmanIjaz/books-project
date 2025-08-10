@@ -1,0 +1,23 @@
+.spinnerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+.spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 4px solid var(--color-surface);
+  border-top: 4px solid var(--color-primary);
+  animation: spin 0.8s linear infinite;
+  background: transparent;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

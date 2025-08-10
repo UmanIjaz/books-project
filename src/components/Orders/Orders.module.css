@@ -1,0 +1,108 @@
+.ordersSection {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ordersTableWrapper {
+  overflow-x: auto;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 16px rgba(108, 99, 255, 0.06);
+  padding: 1.2rem;
+}
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+.tableHeader {
+  margin: 1rem 0rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.tableHeadings {
+  background: var(--color-bg);
+}
+.tableHeadings th {
+  font-size: 1rem !important;
+}
+.ordersTable th,
+.ordersTable td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
+.ordersTable th {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-border);
+}
+.ordersTable td {
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+}
+.orderRow:last-child td {
+  border-bottom: none;
+}
+.customerCell {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  background: #f3f3f3;
+}
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+.statusCompleted {
+  color: var(--color-success, #22c55e);
+}
+.statusPending {
+  color: var(--color-warning, #facc15);
+}
+.statusCancelled {
+  color: var(--color-danger, #e11d48);
+}
+.actionBtn {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.actionBtn:hover {
+  background: var(--color-primary-dark, #4f46e5);
+}
+@media (max-width: 480px) {
+  .tableHeader {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .ordersTableWrapper {
+    padding: 0.5rem;
+  }
+  .ordersTable th,
+  .ordersTable td {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.7rem !important;
+  }
+  .avatar {
+    width: 28px;
+    height: 28px;
+  }
+}

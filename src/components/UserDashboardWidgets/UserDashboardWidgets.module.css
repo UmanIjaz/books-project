@@ -1,0 +1,21 @@
+.widgetsRow {
+  display: flex;
+  gap: 1em;
+}
+.widgetBox {
+  flex: 1;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px rgba(80, 80, 180, 0.06);
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+@media (max-width: 810px) {
+  .widgetsRow {
+    flex-direction: column;
+  }
+}
