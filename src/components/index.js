@@ -36,11 +36,11 @@ export { default as UserDashboardWidgets } from "./features/UserDashboardWidgets
 // Modal/Popup Components
 
 // Toast Components
-export { default as ToastContainer } from "./toast/ToastContainer.jsx";
-export { default as ToastItem } from "./toast/ToastItem.jsx";
-export { default as ToastProvider } from "./toast/ToastProvider.jsx";
-export { toast } from "./toast/toast.js";
-export { toastReducer } from "./toast/toastReducer.js";
+export { default as ToastContainer } from "./toast/ToastContainer";
+export { default as ToastItem } from "./toast/ToastItem";
+export { default as ToastProvider } from "./toast/ToastProvider";
+export { toast } from "./toast/toast";
+export { toastReducer } from "./toast/toastReducer";
 
 // Utility Components
 export { default as ProtectedRoutes } from "./utils/ProtectedRoutes/ProtectedRoutes";
