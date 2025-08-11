@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import { Sidebar } from "../components";
 import styles from "./DashboardLayout.module.css";
-import HamburgerMenu from "../components/HamburgerMenu/HamburgerMenu";
-import Header from "../components/Header/Header";
+import { HamburgerMenu } from "../components";
+import { Header } from "../components";
 import { useRef, useState } from "react";
-import ScrollToTop from "../components/Utils/ScrollToTop/ScrollToTop";
-import Spinner from "../components/Spinner/Spinner";
+import { ScrollToTop } from "../components";
+import { Spinner } from "../components";
 function DashboardLayout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const contentRef = useRef();

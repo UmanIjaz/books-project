@@ -1,6 +1,8 @@
-import StatsCards from "../../components/StatsCards/StatsCards";
-import UserDashboardWidgets from "../../components/UserDashboardWidgets/UserDashboardWidgets";
-import WishlistShowcase from "../../components/WishlistShowcase/WishlistShowcase";
+import {
+  StatsCards,
+  UserDashboardWidgets,
+  WishlistShowcase,
+} from "../../components";
 // import styles from "./Dashboard.module.css";
 function Dashboard() {
   const styles = {

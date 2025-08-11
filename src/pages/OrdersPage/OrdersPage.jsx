@@ -1,7 +1,5 @@
-import Orders from "../../components/Orders/Orders";
-import StatsCards from "../../components/StatsCards/StatsCards";
-import UserDashboardWidgets from "../../components/UserDashboardWidgets/UserDashboardWidgets";
-import WishlistShowcase from "../../components/WishlistShowcase/WishlistShowcase";
+import { Orders } from "../../components";
+// Unused imports removed; add back as needed
 
 function OrdersPage() {
   const styles = {

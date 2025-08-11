@@ -1,13 +1,5 @@
-import FilterDropdown from "../../components/FilterDropdown/FilterDropdown";
-import Pagination from "../../components/Pagination/Pagination";
-import ProductList from "../../components/ProductList/ProductList";
-import Products from "../../components/Products/Products";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import { ProductList } from "../../components";
 import styles from "./WishlistPage.module.css";
-// import SearchBar from "../SearchBar/SearchBar";
-// import FilterDropdown from "../FilterDropdown/FilterDropdown";
-// import ProductList from "../ProductList/ProductList";
-// import Pagination from "../Pagination/Pagination";
 
 // Dummy wishlist products
 const wishlistProducts = [

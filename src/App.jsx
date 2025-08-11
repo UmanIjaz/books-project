@@ -1,17 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./pages/LoginPage/LoginPage";
 import Dashboard from "./pages/DashboardPage/DashboardPage";
-import Products from "./pages/ProductsPage/ProdcutsPage";
 import MainLayout from "./layout/MainLayout";
 import DashboardLayout from "./layout/DashboardLayout";
 import WishlistPage from "./pages/WishlistPage/WishlistPage";
 import OrdersPage from "./pages/OrdersPage/OrdersPage";
 import ProductsPage from "./pages/ProductsPage/ProdcutsPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import ProtectedRoute from "./components/Utils/ScrollToTop/ProtectedRoute";
+import { ProtectedRoutes } from "./components";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
-import { useEffect } from "react";
 
 function App() {
   return (
@@ -21,7 +18,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route element={<MainLayout />}></Route>
-          <Route element={<ProtectedRoute />}>
+          <Route element={<ProtectedRoutes />}>
             <Route element={<DashboardLayout />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/products" element={<ProductsPage />} />
