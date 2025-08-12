@@ -43,83 +43,88 @@ function RegisterForm() {
       autoComplete="off"
       onSubmit={handleSubmit(onRegister)}
     >
-      {/* Name */}
-      <div className={styles.formGroup}>
-        <label htmlFor="name" className={styles.label}>
-          Name
-        </label>
-        <input
-          type="text"
-          id="name"
-          className={styles.input}
-          placeholder="Enter your name"
-          {...register("name", {
-            required: "Name is required",
-            minLength: {
-              value: 3,
-              message: "Name must be at least 3 characters",
-            },
-            pattern: {
-              value: /^[A-Za-z\s]+$/,
-              message: "Only letters and spaces allowed",
-            },
-          })}
-          disabled={isSubmitting}
-        />
-        {errors.name && <p className={styles.error}>{errors.name.message}</p>}
-      </div>
+      <fieldset>
+        <legend>Register</legend>
+        {/* Name */}
+        <div className={styles.formGroup}>
+          <label htmlFor="name" className={styles.label}>
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            className={styles.input}
+            placeholder="Enter your name"
+            {...register("name", {
+              required: "Name is required",
+              minLength: {
+                value: 3,
+                message: "Name must be at least 3 characters",
+              },
+              pattern: {
+                value: /^[A-Za-z\s]+$/,
+                message: "Only letters and spaces allowed",
+              },
+            })}
+            disabled={isSubmitting}
+          />
+          {errors.name && <p className={styles.error}>{errors.name.message}</p>}
+        </div>
 
-      {/* Email */}
-      <div className={styles.formGroup}>
-        <label htmlFor="email" className={styles.label}>
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          className={styles.input}
-          placeholder="Enter your email"
-          {...register("email", {
-            required: "Email is required",
-            pattern: {
-              value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
-              message: "Invalid email format",
-            },
-          })}
-          disabled={isSubmitting}
-        />
-        {errors.email && <p className={styles.error}>{errors.email.message}</p>}
-      </div>
+        {/* Email */}
+        <div className={styles.formGroup}>
+          <label htmlFor="email" className={styles.label}>
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            className={styles.input}
+            placeholder="Enter your email"
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                message: "Invalid email format",
+              },
+            })}
+            disabled={isSubmitting}
+          />
+          {errors.email && (
+            <p className={styles.error}>{errors.email.message}</p>
+          )}
+        </div>
 
-      {/* Password */}
-      <div className={styles.formGroup}>
-        <label htmlFor="password" className={styles.label}>
-          Password
-        </label>
-        <input
-          type="password"
-          id="password"
-          className={styles.input}
-          placeholder="Enter your password"
-          autoComplete="current-password"
-          {...register("password", {
-            required: "Password is required",
-            minLength: {
-              value: 8,
-              message: "Password must be at least 8 characters",
-            },
-            pattern: {
-              value: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)/,
-              message:
-                "Password must contain uppercase, lowercase, and a number",
-            },
-          })}
-          disabled={isSubmitting}
-        />
-        {errors.password && (
-          <p className={styles.error}>{errors.password.message}</p>
-        )}
-      </div>
+        {/* Password */}
+        <div className={styles.formGroup}>
+          <label htmlFor="password" className={styles.label}>
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            className={styles.input}
+            placeholder="Enter your password"
+            autoComplete="current-password"
+            {...register("password", {
+              required: "Password is required",
+              minLength: {
+                value: 8,
+                message: "Password must be at least 8 characters",
+              },
+              pattern: {
+                value: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)/,
+                message:
+                  "Password must contain uppercase, lowercase, and a number",
+              },
+            })}
+            disabled={isSubmitting}
+          />
+          {errors.password && (
+            <p className={styles.error}>{errors.password.message}</p>
+          )}
+        </div>
+      </fieldset>
 
       <button
         type="submit"
