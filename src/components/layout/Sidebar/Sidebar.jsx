@@ -9,7 +9,7 @@ import {
   FiLogOut,
   FiShoppingBag,
 } from "react-icons/fi";
-import { ThemeSwitcher } from "../../";
+import { Button, Modal, ThemeSwitcher } from "../../";
 import { useAuth } from "../../../contexts/AuthContext";
 import { toast } from "../../";
 import { useState } from "react";
@@ -47,6 +47,7 @@ const navItems = [
 const Sidebar = () => {
   const [isLogingOut, setIsLogingOut] = useState(false);
   const { logout } = useAuth();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
   async function handleLogout() {
@@ -75,7 +76,10 @@ const Sidebar = () => {
           {navItems.map(({ to, label, icon }) => (
             <li key={label}>
               {label === "Sign Out" ? (
-                <button onClick={handleLogout} className={styles.sidebarLink}>
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className={styles.sidebarLink}
+                >
                   {isLogingOut ? (
                     <>
                       <SpinnerMini />
@@ -107,6 +111,45 @@ const Sidebar = () => {
 
         <ThemeSwitcher className={styles.ThemeBtnAbsolute} />
       </nav>
+      {isModalOpen && (
+        <Modal onClose={() => setIsModalOpen(false)}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "1rem",
+              padding: "1.5rem",
+            }}
+          >
+            <h2 style={{ margin: 0 }}>Confirm Logout</h2>
+            <p>
+              Are you sure you want to log out? You’ll need to sign in again to
+              access your account.
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "flex-end",
+                gap: "0.5rem",
+              }}
+            >
+              <Button
+                style={{ backgroundColor: "#ccc", color: "#000" }}
+                onClick={() => setIsModalOpen(false)}
+              >
+                Cancel
+              </Button>
+              <Button
+                style={{ backgroundColor: "red", color: "#fff" }}
+                onClick={handleLogout}
+              >
+                Yes, Log Out
+              </Button>
+            </div>
+          </div>
+        </Modal>
+      )}
     </>
   );
 };

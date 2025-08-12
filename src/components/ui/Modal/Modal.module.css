@@ -1,0 +1,61 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* ensure it stays on top */
+}
+
+.modal {
+  background: var(--color-bg, #fff);
+  color: var(--color-text, #000);
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  animation: fadeInScale 0.2s ease-out;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  padding: 0px;
+  color: var(--color-text, #000);
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.1s ease-in;
+}
+
+.closeBtn:hover {
+  color: red;
+}
+
+.closeBtn:focus {
+  color: red;
+  outline: none;
+  border: none;
+  transform: scale(0.9);
+}
+
+/* Simple opening animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

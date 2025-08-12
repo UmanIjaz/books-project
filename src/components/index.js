@@ -13,6 +13,8 @@ export { default as ThemeSwitcher } from "./ui/ThemeSwitcher/ThemeSwitcher";
 export { default as Pagination } from "./ui/Pagination/Pagination";
 export { default as SearchBar } from "./ui/SearchBar/SearchBar";
 export { default as FilterDropdown } from "./ui/FilterDropdown/FilterDropdown";
+export { default as Modal } from "./ui/Modal/Modal";
+export { default as Button } from "./ui/Button/Button";
 
 // Form Components
 export { default as LoginForm } from "./forms/LoginForm/LoginForm";
@@ -32,8 +34,6 @@ export { default as Orders } from "./features/Orders/Orders";
 export { default as Products } from "./features/Products/Products";
 export { default as WishlistShowcase } from "./features/WishlistShowcase/WishlistShowcase";
 export { default as UserDashboardWidgets } from "./features/UserDashboardWidgets/UserDashboardWidgets";
-
-// Modal/Popup Components
 
 // Toast Components
 export { default as ToastContainer } from "./toast/ToastContainer";
