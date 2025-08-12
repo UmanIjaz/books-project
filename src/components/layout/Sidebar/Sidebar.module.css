@@ -84,7 +84,7 @@
   position: relative;
   background: none;
   border: none;
-  outline: none;
+  outline: var(--color-hover);
 }
 
 .sidebarLink svg {

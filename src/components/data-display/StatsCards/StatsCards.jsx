@@ -43,7 +43,12 @@ function StatsCards() {
           <span className={styles.value}>189</span>
           <div className={styles.avatars}>
             {avatars.map((src, i) => (
-              <img key={i} src={src} alt="avatar" className={styles.avatar} />
+              <img
+                key={i}
+                src={src}
+                alt={`User avatar ${i + 1}`}
+                className={styles.avatar}
+              />
             ))}
           </div>
         </div>

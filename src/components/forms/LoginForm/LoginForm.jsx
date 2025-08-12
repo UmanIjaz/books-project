@@ -42,53 +42,58 @@ function LoginForm() {
       autoComplete="off"
       onSubmit={handleSubmit(handleLogin)}
     >
-      {/* Email */}
-      <div className={styles.formGroup}>
-        <label htmlFor="email" className={styles.label}>
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          className={`${styles.input} ${errors.email ? styles.error : ""}`}
-          placeholder="Enter your email"
-          autoComplete="email"
-          disabled={isSubmitting}
-          {...register("email", {
-            required: "Email is required",
-            pattern: {
-              value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
-              message: "Invalid email format",
-            },
-          })}
-        />
-        {errors.email && <p className={styles.error}>{errors.email.message}</p>}
-      </div>
+      <fieldset>
+        <legend>Login</legend>
+        {/* Email */}
+        <div className={styles.formGroup}>
+          <label htmlFor="email" className={styles.label}>
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            className={`${styles.input} ${errors.email ? styles.error : ""}`}
+            placeholder="Enter your email"
+            autoComplete="email"
+            disabled={isSubmitting}
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                message: "Invalid email format",
+              },
+            })}
+          />
+          {errors.email && (
+            <p className={styles.error}>{errors.email.message}</p>
+          )}
+        </div>
 
-      {/* Password */}
-      <div className={styles.formGroup}>
-        <label htmlFor="password" className={styles.label}>
-          Password
-        </label>
-        <input
-          type="password"
-          id="password"
-          className={`${styles.input} ${errors.password ? styles.error : ""}`}
-          placeholder="Enter your password"
-          autoComplete="current-password"
-          disabled={isSubmitting}
-          {...register("password", {
-            required: "Password is required",
-            minLength: {
-              value: 8,
-              message: "Password must be at least 8 characters",
-            },
-          })}
-        />
-        {errors.password && (
-          <p className={styles.error}>{errors.password.message}</p>
-        )}
-      </div>
+        {/* Password */}
+        <div className={styles.formGroup}>
+          <label htmlFor="password" className={styles.label}>
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            className={`${styles.input} ${errors.password ? styles.error : ""}`}
+            placeholder="Enter your password"
+            autoComplete="current-password"
+            disabled={isSubmitting}
+            {...register("password", {
+              required: "Password is required",
+              minLength: {
+                value: 8,
+                message: "Password must be at least 8 characters",
+              },
+            })}
+          />
+          {errors.password && (
+            <p className={styles.error}>{errors.password.message}</p>
+          )}
+        </div>
+      </fieldset>
 
       {/* Submit Button */}
       <button type="submit" disabled={isSubmitting} className={styles.loginBtn}>
@@ -98,11 +103,11 @@ function LoginForm() {
       {/* Root-level form error (fallback) */}
       {errors.root && <p className={styles.error}>{errors.root.message}</p>}
 
-      <div className={styles.links}>
+      <nav className={styles.links}>
         <Link to="/register" className={styles.link}>
           Create account
         </Link>
-      </div>
+      </nav>
     </form>
   );
 }

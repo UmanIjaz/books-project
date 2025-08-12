@@ -65,16 +65,15 @@ function Orders() {
           />
         </div>
         <table className={styles.ordersTable}>
+          <caption>Orders List</caption>
           <thead>
             <tr className={styles.tableHeadings}>
-              <th>Order ID</th>
-              {/* <th>Customer</th> */}
-              <th>Date</th>
-              {/* <th>Status</th> */}
-              <th>Items</th>
-              <th>Total</th>
-              <th>Payment</th>
-              <th>Action</th>
+              <th scope="col">Order ID</th>
+              <th scope="col">Date</th>
+              <th scope="col">Items</th>
+              <th scope="col">Total</th>
+              <th scope="col">Payment</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>

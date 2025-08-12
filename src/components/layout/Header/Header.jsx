@@ -4,6 +4,7 @@ import styles from "./Header.module.css";
 
 function Header({ onHamburgerClick }) {
   const { user } = useAuth();
+
   function formatName(user) {
     if (!user?.name) return "";
 
@@ -18,7 +19,7 @@ function Header({ onHamburgerClick }) {
   const displayName = formatName(user);
   return (
     <header className={styles.header}>
-      <h2 className={styles.greeting}>Hello {displayName}👋</h2>
+      <h1 className={styles.greeting}>Hello {displayName}👋</h1>
       <div className={styles.logoWrapper}>
         <Logo />
       </div>

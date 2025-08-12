@@ -4,7 +4,7 @@ function Avatar() {
     <img
       src="https://randomuser.me/api/portraits/men/32.jpg"
       className={styles.avatar}
-      alt="avtar"
+      alt="User profile picture"
     />
   );
 }
