@@ -101,7 +101,7 @@ function HamburgerMenu({ onClose, isOpen }) {
             className={styles.menuItem}
             onClick={() => setIsModalOpen(true)}
           >
-            {isLogingOut ? <SpinnerMini /> : <FiUser />}
+            <FiUser />
             Sign Out
           </NavLink>
         </li>
@@ -139,10 +139,22 @@ function HamburgerMenu({ onClose, isOpen }) {
                 Cancel
               </Button>
               <Button
-                style={{ backgroundColor: "red", color: "#fff" }}
+                style={{
+                  backgroundColor: "red",
+                  color: "#fff",
+                  display: "flex",
+                  gap: "0.5rem",
+                }}
                 onClick={handleLogout}
               >
-                Yes, Log Out
+                {isLogingOut ? (
+                  <>
+                    <SpinnerMini />
+                    Yes, Log out
+                  </>
+                ) : (
+                  <>Yes, Log out</>
+                )}
               </Button>
             </div>
           </div>

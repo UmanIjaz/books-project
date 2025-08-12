@@ -80,17 +80,8 @@ const Sidebar = () => {
                   onClick={() => setIsModalOpen(true)}
                   className={styles.sidebarLink}
                 >
-                  {isLogingOut ? (
-                    <>
-                      <SpinnerMini />
-                      <span>{label}</span>
-                    </>
-                  ) : (
-                    <>
-                      {icon}
-                      <span>{label}</span>
-                    </>
-                  )}
+                  {icon}
+                  <span>{label}</span>
                 </button>
               ) : (
                 <NavLink
@@ -141,10 +132,22 @@ const Sidebar = () => {
                 Cancel
               </Button>
               <Button
-                style={{ backgroundColor: "red", color: "#fff" }}
+                style={{
+                  backgroundColor: "red",
+                  color: "#fff",
+                  display: "flex",
+                  gap: "0.5rem",
+                }}
                 onClick={handleLogout}
               >
-                Yes, Log Out
+                {isLogingOut ? (
+                  <>
+                    <SpinnerMini />
+                    Yes, Log out
+                  </>
+                ) : (
+                  <>Yes, Log out</>
+                )}
               </Button>
             </div>
           </div>
