@@ -73,7 +73,7 @@
     --hover: 0 0% 10%; /* #1a1a1a - Slight lift */
 
     /* Dark semantic colors */
-    --destructive: 0 63% 31%; /* Darker red */
+    --destructive: 0 70% 42%; /* Darker red */
     --destructive-foreground: 0 0% 98%;
     --success: 142 41% 20%; /* Darker green */
     --success-foreground: 0 0% 98%;
@@ -331,6 +331,21 @@
 
   .animate-fade-in-scale {
     animation: fadeInScale 0.2s ease-out;
+  }
+
+  .animate-toast-slide-in {
+    animation: toastSlideIn 0.3s ease;
+  }
+
+  @keyframes toastSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   /* Custom animations */

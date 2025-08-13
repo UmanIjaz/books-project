@@ -3,7 +3,6 @@ import { FiSearch } from "react-icons/fi";
 
 /**
  * SearchBar Component
- *
  * @param {Object} props
  * @param {string} props.placeholder - Placeholder text
  * @param {string} props.value - Input value

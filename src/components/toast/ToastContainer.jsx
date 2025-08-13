@@ -3,15 +3,7 @@ import ToastItem from "./ToastItem";
 
 function ToastContainer({ toasts }) {
   return createPortal(
-    <div
-      style={{
-        position: "fixed",
-        bottom: "1rem",
-        left: "50%",
-        transform: "translateX(-50%)",
-        zIndex: 1000,
-      }}
-    >
+    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-[1000]">
       {toasts.map((t) => (
         <ToastItem key={t.id} {...t} />
       ))}
