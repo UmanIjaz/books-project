@@ -29,10 +29,10 @@ export { default as SalesTrendsChart } from "./charts/SalesTrendsChart";
 export { default as RecentOrdersChart } from "./charts/RecentOrdersChart";
 
 // Feature Components
-export { default as Orders } from "./features/Orders/Orders";
-export { default as Products } from "./features/Products/Products";
-export { default as WishlistShowcase } from "./features/WishlistShowcase/WishlistShowcase";
-export { default as UserDashboardWidgets } from "./features/UserDashboardWidgets/UserDashboardWidgets";
+export { default as Orders } from "./features/Orders";
+export { default as Products } from "./features/Products";
+export { default as WishlistShowcase } from "./features/WishlistShowcase";
+export { default as UserDashboardWidgets } from "./features/UserDashboardWidgets";
 
 // Toast Components
 export { default as ToastContainer } from "./toast/ToastContainer";

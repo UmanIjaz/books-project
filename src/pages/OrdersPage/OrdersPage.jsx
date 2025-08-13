@@ -1,4 +1,4 @@
-import { Orders } from "../../components";
+import { Orders } from "../../components/";
 // Unused imports removed; add back as needed
 
 function OrdersPage() {

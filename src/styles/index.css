@@ -124,13 +124,14 @@
     @apply inline-flex items-center justify-center font-medium rounded 
            border-none cursor-pointer transition-all duration-200 
            disabled:opacity-60 disabled:cursor-not-allowed
-           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+    focus:ring-offset-2  focus:ring-primary focus:ring-2
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary  focus-visible:ring-offset-2;
     box-shadow: var(--shadow-button);
     font-family: Inter, system-ui, sans-serif;
   }
 
   .btn-primary {
-    @apply btn bg-primary text-primary-foreground hover:opacity-90;
+    @apply btn bg-primary text-accent-foreground hover:opacity-90;
   }
 
   .btn-secondary {

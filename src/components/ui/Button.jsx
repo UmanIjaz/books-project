@@ -24,6 +24,7 @@ function Button({
   loading = false,
   onClick,
   className,
+  hover = true,
   ...rest
 }) {
   return (
@@ -35,6 +36,7 @@ function Button({
         `btn-${size}`,
         {
           "opacity-50 cursor-not-allowed": loading,
+          "hover:scale-105": hover,
         },
         className,
         "gap-x-2"
