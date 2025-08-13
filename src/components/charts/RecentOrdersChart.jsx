@@ -7,7 +7,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import styles from "./RecentOrdersChart.module.css";
+import { cn } from "@/utils/cn";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
@@ -42,11 +42,12 @@ const options = {
 
 function RecentOrdersChart() {
   return (
-    <div className={styles.chartBox}>
-      <h4>Recent Orders (7d)</h4>
-      <div className={styles.chartWrapper}>
-      <Bar data={data} options={options} height={220} />
-
+    <div className={cn("w-full max-w-[320px] mx-auto text-center")}>
+      <h4 className={cn("mb-3 text-lg font-semibold text-purple-700")}>
+        Recent Orders (7d)
+      </h4>
+      <div className={cn("relative h-[220px] w-full")}>
+        <Bar data={data} options={options} height={220} />
       </div>
     </div>
   );

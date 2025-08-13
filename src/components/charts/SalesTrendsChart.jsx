@@ -8,7 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import styles from "./SalesTrendsChart.module.css";
+import { cn } from "@/utils/cn";
 
 ChartJS.register(
   CategoryScale,
@@ -67,8 +67,15 @@ const options = {
 
 function SalesTrendsChart() {
   return (
-    <div className={styles.chartCard}>
-      <h3 className={styles.title}>Sales Trends (Last 7 Days)</h3>
+    <div
+      className={cn(
+        "bg-surface rounded-2xl shadow-[0_2px_12px_rgba(80,80,180,0.06)]",
+        "px-10 pt-8 pb-6 mb-8 mt-6"
+      )}
+    >
+      <h3 className={cn("text-lg font-semibold mb-5 text-indigo-700")}>
+        Sales Trends (Last 7 Days)
+      </h3>
       <Line data={data} options={options} height={220} />
     </div>
   );

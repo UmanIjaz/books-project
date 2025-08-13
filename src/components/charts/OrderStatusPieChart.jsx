@@ -1,6 +1,6 @@
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import styles from "./OrderStatusPieChart.module.css";
+import { cn } from "@/utils/cn";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -18,7 +18,7 @@ const data = {
 
 const options = {
   cutout: "70%",
-  maintainAspectRatio: false, // ✅ So height works from parent
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       display: true,
@@ -29,9 +29,11 @@ const options = {
 
 function OrderStatusPieChart() {
   return (
-    <div className={styles.pieChartBox}>
-      <h4>Order Status</h4>
-      <div className={styles.chartWrapper}>
+    <div className={cn("w-full max-w-[320px] mx-auto text-center")}>
+      <h4 className={cn("mb-4 text-lg font-semibold text-foreground")}>
+        Order Status
+      </h4>
+      <div className={cn("relative h-[220px] w-full")}>
         <Doughnut data={data} options={options} />
       </div>
     </div>

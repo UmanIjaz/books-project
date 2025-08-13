@@ -24,9 +24,9 @@ export { default as ProductList } from "./data-display/ProductList";
 export { default as StatsCards } from "./data-display/StatsCards";
 
 // Chart Components
-export { default as OrderStatusPieChart } from "./charts/OrderStatusPieChart/OrderStatusPieChart";
-export { default as SalesTrendsChart } from "./charts/SalesTrendsChart/SalesTrendsChart";
-export { default as RecentOrdersChart } from "./charts/RecentOrdersChart/RecentOrdersChart";
+export { default as OrderStatusPieChart } from "./charts/OrderStatusPieChart";
+export { default as SalesTrendsChart } from "./charts/SalesTrendsChart";
+export { default as RecentOrdersChart } from "./charts/RecentOrdersChart";
 
 // Feature Components
 export { default as Orders } from "./features/Orders/Orders";
