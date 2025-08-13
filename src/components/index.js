@@ -8,13 +8,13 @@ export { default as HamburgerIcon } from "./layout/HamburgerIcon/HamburgerIcon";
 export { default as Avatar } from "./ui/Avatar/Avatar";
 export { default as Logo } from "./ui/Logo/Logo";
 export { default as Spinner } from "./ui/Spinner/Spinner";
-export { default as SpinnerMini } from "./ui/SpinnerMini/SpinnerMini";
+export { default as SpinnerMini } from "./ui/SpinnerMini";
 export { default as ThemeSwitcher } from "./ui/ThemeSwitcher/ThemeSwitcher";
 export { default as Pagination } from "./ui/Pagination/Pagination";
 export { default as SearchBar } from "./ui/SearchBar/SearchBar";
 export { default as FilterDropdown } from "./ui/FilterDropdown/FilterDropdown";
-export { default as Modal } from "./ui/Modal/Modal";
-export { default as Button } from "./ui/Button/Button";
+export { default as Modal } from "./ui/Modal";
+export { default as Button } from "./ui/Button";
 
 // Form Components
 export { default as LoginForm } from "./forms/LoginForm/LoginForm";

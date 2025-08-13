@@ -3,8 +3,6 @@ import {
   UserDashboardWidgets,
   WishlistShowcase,
 } from "../../components";
-import Modal from "../../components/ui/Modal/Modal";
-// import styles from "./Dashboard.module.css";
 function Dashboard() {
   const styles = {
     display: "flex",
