@@ -1,5 +1,5 @@
 // Layout Components
-export { default as Sidebar } from "./layout/Sidebar/Sidebar";
+export { default as Sidebar } from "./layout/Sidebar";
 export { default as Header } from "./layout/Header/Header";
 export { default as HamburgerMenu } from "./layout/HamburgerMenu/HamburgerMenu";
 export { default as HamburgerIcon } from "./layout/HamburgerIcon/HamburgerIcon";
