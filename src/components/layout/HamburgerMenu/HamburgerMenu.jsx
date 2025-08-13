@@ -7,7 +7,6 @@ import { ThemeSwitcher } from "../../";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "../../toast/toast";
 import { useAuth } from "../../../contexts/AuthContext";
-import { SpinnerMini } from "../../";
 
 function HamburgerMenu({ onClose, isOpen }) {
   const [isLogingOut, setIsLogingOut] = useState(false);

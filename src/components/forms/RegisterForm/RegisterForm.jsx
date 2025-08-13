@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "../../toast/toast";
 import { useState } from "react";
-import { SpinnerMini } from "../../";
+import { Spinner } from "../../";
 import { useAuth } from "../../../contexts/AuthContext";
 
 function RegisterForm() {
@@ -131,7 +131,7 @@ function RegisterForm() {
         disabled={isSubmitting}
         className={styles.registerBtn}
       >
-        {isSubmitting ? <SpinnerMini /> : "Sign Up"}
+        {isSubmitting ? <Spinner size="md" /> : "Sign Up"}
       </button>
 
       <div className={styles.links}>

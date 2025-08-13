@@ -2,7 +2,7 @@ import styles from "./LoginForm.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "../../toast/toast";
-import { SpinnerMini } from "../../";
+import { Spinner } from "../../";
 import { useAuth } from "../../../contexts/AuthContext";
 import { useState } from "react";
 
@@ -97,7 +97,7 @@ function LoginForm() {
 
       {/* Submit Button */}
       <button type="submit" disabled={isSubmitting} className={styles.loginBtn}>
-        {isSubmitting ? <SpinnerMini /> : "Sign In"}
+        {isSubmitting ? <Spinner size="md" /> : "Sign In"}
       </button>
 
       {/* Root-level form error (fallback) */}

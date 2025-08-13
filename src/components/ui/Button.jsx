@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import { SpinnerMini } from "../";
+import { Spinner } from "../";
 
 /**
  * Button Component
@@ -36,7 +36,8 @@ function Button({
         {
           "opacity-50 cursor-not-allowed": loading,
         },
-        className
+        className,
+        "gap-x-2"
       )}
       disabled={disabled || loading}
       onClick={onClick}
@@ -44,7 +45,7 @@ function Button({
     >
       {loading ? (
         <>
-          <SpinnerMini />
+          <Spinner size="sm" />
           Loading...
         </>
       ) : (

@@ -1,6 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./Sidebar.module.css";
-import Logo from "../../ui/Logo/Logo";
 import logo from "/src/assets/logo.svg";
 import {
   FiBox,
@@ -9,11 +8,10 @@ import {
   FiLogOut,
   FiShoppingBag,
 } from "react-icons/fi";
-import { Button, Modal, ThemeSwitcher } from "../../";
+import { Button, Modal, ThemeSwitcher, Logo } from "../../";
 import { useAuth } from "../../../contexts/AuthContext";
 import { toast } from "../../";
 import { useState } from "react";
-import { SpinnerMini } from "../../";
 
 const navItems = [
   {

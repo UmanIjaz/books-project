@@ -109,7 +109,7 @@
 
   /* Focus styles */
   :focus-visible {
-    @apply outline-none ring-2 ring-primary ring-offset-2;
+    @apply outline-none ring-2 ring-primary;
   }
 
   /* Selection styles */
@@ -331,6 +331,16 @@
 
   .animate-fade-in-scale {
     animation: fadeInScale 0.2s ease-out;
+  }
+
+  /* Custom animations */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   @keyframes fadeInScale {
