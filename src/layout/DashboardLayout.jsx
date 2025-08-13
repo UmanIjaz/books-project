@@ -1,28 +1,36 @@
 import { Outlet } from "react-router-dom";
 import { Sidebar } from "../components";
-import styles from "./DashboardLayout.module.css";
 import { HamburgerMenu } from "../components";
 import { Header } from "../components";
 import { useRef, useState } from "react";
 import { ScrollToTop } from "../components";
-import { Spinner } from "../components";
+import { cn } from "@/utils/cn";
+
 function DashboardLayout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const contentRef = useRef();
+
   return (
-    <div className={styles.DashboardLayout}>
+    <div className={cn("h-screen w-screen overflow-hidden flex box-border")}>
       <ScrollToTop scrollRef={contentRef} />
 
       <Sidebar />
+
       {isMenuOpen && (
         <HamburgerMenu
           isOpen={isMenuOpen}
           onClose={() => setIsMenuOpen(false)}
         />
       )}
-      <div className={styles.mainArea}>
+
+      <div
+        className={cn(
+          "flex-1 flex flex-col overflow-hidden max-w-[1200px] mx-auto"
+        )}
+      >
         <Header onHamburgerClick={() => setIsMenuOpen(true)} />
-        <main className={styles.mainContent} ref={contentRef}>
+
+        <main className={cn("flex-1 p-4 overflow-y-auto")} ref={contentRef}>
           <Outlet />
         </main>
       </div>

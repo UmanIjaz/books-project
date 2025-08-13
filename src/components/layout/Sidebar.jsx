@@ -112,7 +112,7 @@ const Sidebar = () => {
                   className={cn(
                     // Base link styles
                     "flex items-center h-[45px] gap-4 rounded transition-all duration-200",
-                    "text-muted font-medium bg-transparent border-none cursor-pointer",
+                    "text-muted font-medium bg-transparent border-none cursor-pointer w-full",
                     "hover:bg-hover hover:text-primary",
                     // Icon styles
                     "[&_svg]:w-[22px] [&_svg]:h-[22px] [&_svg]:stroke-muted [&_svg]:fill-none [&_svg]:transition-colors [&_svg]:duration-200",

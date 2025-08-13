@@ -2,15 +2,12 @@ import {
   StatsCards,
   UserDashboardWidgets,
   WishlistShowcase,
-} from "../../components";
+} from "../components";
+import { cn } from "@/utils/cn";
+
 function Dashboard() {
-  const styles = {
-    display: "flex",
-    flexDirection: "column",
-    gap: "1rem",
-  };
   return (
-    <div className={styles.dashboardPage} style={styles}>
+    <div className={cn("flex flex-col gap-6")}>
       <StatsCards />
       <UserDashboardWidgets />
       <WishlistShowcase />

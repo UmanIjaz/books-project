@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Dashboard from "./pages/DashboardPage/DashboardPage";
+import Dashboard from "./pages/DashboardPage";
 import MainLayout from "./layout/MainLayout";
 import DashboardLayout from "./layout/DashboardLayout";
-import WishlistPage from "./pages/WishlistPage/WishlistPage";
-import OrdersPage from "./pages/OrdersPage/OrdersPage";
-import ProductsPage from "./pages/ProductsPage/ProdcutsPage";
-import LoginPage from "./pages/LoginPage/LoginPage";
+import WishlistPage from "./pages/WishlistPage";
+import OrdersPage from "./pages/OrdersPage";
+import ProductsPage from "./pages/ProdcutsPage";
+import LoginPage from "./pages/LoginPage";
 import { ProtectedRoutes } from "./components";
-import RegisterPage from "./pages/RegisterPage/RegisterPage";
-import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import RegisterPage from "./pages/RegisterPage";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
