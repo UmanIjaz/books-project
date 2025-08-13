@@ -20,8 +20,8 @@ export { default as LoginForm } from "./forms/LoginForm";
 export { default as RegisterForm } from "./forms/RegisterForm";
 
 // Data Display Components
-export { default as ProductList } from "./data-display/ProductList/ProductList";
-export { default as StatsCards } from "./data-display/StatsCards/StatsCards";
+export { default as ProductList } from "./data-display/ProductList";
+export { default as StatsCards } from "./data-display/StatsCards";
 
 // Chart Components
 export { default as OrderStatusPieChart } from "./charts/OrderStatusPieChart/OrderStatusPieChart";
