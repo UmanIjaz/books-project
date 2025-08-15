@@ -43,7 +43,9 @@ function LoginForm() {
       onSubmit={handleSubmit(handleLogin)}
     >
       <fieldset className="border-none p-0 m-0">
-        <legend className={cn("text-xl font-semibold text-foreground mb-4")}>
+        <legend
+          className={cn("text-xl font-semibold text-foreground mb-4 sr-only")}
+        >
           Login
         </legend>
 
