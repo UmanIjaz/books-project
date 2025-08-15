@@ -9,6 +9,7 @@ import LoginPage from "./pages/LoginPage";
 import { ProtectedRoutes } from "./components";
 import RegisterPage from "./pages/RegisterPage";
 import PageNotFound from "./pages/PageNotFound";
+import ReadingPage from "./pages/ReadingPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="/products" element={<ProductsPage />} />
               <Route path="/orders" element={<OrdersPage />} />
               <Route path="/wishlist" element={<WishlistPage />} />
+              <Route path="/reading" element={<ReadingPage />} />
             </Route>
           </Route>
           <Route path="*" element={<PageNotFound />} />
