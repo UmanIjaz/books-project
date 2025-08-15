@@ -11,4 +11,19 @@ export default defineConfig({
       "@": "/src",
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          router: ["react-router-dom"],
+          charts: ["chart.js", "react-chartjs-2"],
+          forms: ["react-hook-form"],
+          icons: ["react-icons"],
+          supabase: ["@supabase/supabase-js"],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
 });
