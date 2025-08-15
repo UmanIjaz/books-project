@@ -161,7 +161,7 @@ const Sidebar = () => {
 
         {/* Theme Switcher */}
         <div className="absolute bottom-3 right-3">
-          <ThemeSwitcher className="text-muted" />
+          <ThemeSwitcher variant="lg" className="text-muted" />
         </div>
       </nav>
 
