@@ -74,7 +74,7 @@ const Sidebar = () => {
           // Tablet compact (sm - lg)
           "sm:max-lg:w-[75px] sm:max-lg:min-w-[75px] sm:max-lg:max-w-[75px] sm:max-lg:items-center sm:max-lg:px-0 sm:max-lg:py-2",
           // Desktop (lg+)
-          "lg:w-[250px] lg:min-h-screen lg:items-start lg:p-4 lg:shadow-[4px_0_32px_0_rgba(108,99,255,0.07)]",
+          "lg:w-[250px] lg:min-h-screen lg:items-start lg:p-4 lg:shadow-elevation",
           // Default mobile/tablet styles
           "max-lg:w-full max-lg:p-2 max-lg:items-center max-lg:min-h-[60px] max-lg:shadow-[0_2px_16px_0_rgba(108,99,255,0.08)]"
         )}
@@ -140,7 +140,7 @@ const Sidebar = () => {
                       "[&_svg]:w-[22px] [&_svg]:h-[22px] [&_svg]:stroke-muted [&_svg]:fill-none [&_svg]:transition-colors [&_svg]:duration-200",
                       // Active state
                       isActive &&
-                        "bg-primary text-white shadow-[0_6px_24px_0_rgba(108,99,255,0.13)] [&_svg]:stroke-white",
+                        "bg-primary text-white shadow-card [&_svg]:stroke-white",
                       isActive && "hover:bg-primary hover:text-white",
                       // Tablet compact - hide text, center icon
                       "sm:max-lg:[&_span]:hidden sm:max-lg:px-3 sm:max-lg:py-3 sm:max-lg:justify-center",
