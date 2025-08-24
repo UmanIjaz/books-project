@@ -11,11 +11,7 @@ import ThemeSwitcher from "../ui/ThemeSwitcher";
 
 function ReadingHeader() {
   return (
-    <header
-      className={cn(
-        "bg-surface border-b border-border shadow-sm sticky top-0 z-50"
-      )}
-    >
+    <header className={cn(" sticky top-0 z-50")}>
       <div
         className={cn(
           "container mx-auto px-4 py-3",
